@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>M.K Enterprises Chimney Service</title>
+
+<!-- Home-screen support -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="M.K Enterprises">
+<meta name="theme-color" content="#b23d1a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f2a13a'/%3E%3Cstop offset='0.55' stop-color='%23e2662f'/%3E%3Cstop offset='1' stop-color='%23961f0f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23241f1a'/%3E%3Cpath d='M50 16C50 16 30 34 30 54C30 71 39 82 50 82C61 82 70 71 70 54C70 47 65 42 65 42C65 50 60 53 60 53C63 42 50 34 50 22C50 22 55 30 50 36C45 42 40 47 40 55C40 62 44 67 50 67C56 67 60 62 60 56C60 56 54 61 50 56C47 52 50 47 50 47C50 47 50 16 50 16Z' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f2a13a'/%3E%3Cstop offset='0.55' stop-color='%23e2662f'/%3E%3Cstop offset='1' stop-color='%23961f0f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23241f1a'/%3E%3Cpath d='M50 16C50 16 30 34 30 54C30 71 39 82 50 82C61 82 70 71 70 54C70 47 65 42 65 42C65 50 60 53 60 53C63 42 50 34 50 22C50 22 55 30 50 36C45 42 40 47 40 55C40 62 44 67 50 67C56 67 60 62 60 56C60 56 54 61 50 56C47 52 50 47 50 47C50 47 50 16 50 16Z' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="manifest" href='data:application/manifest+json,{"name":"M.K Enterprises Chimney Service","short_name":"M.K Enterprises","start_url":".","display":"standalone","background_color":"%23faf6f0","theme_color":"%23b23d1a"}'>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --cream:#faf6f0;
+    --charcoal:#241f1a;
+    --soot:#4a423b;
+    --ember:#e2662f;
+    --ember-deep:#b23d1a;
+    --brass:#c1892f;
+    --ok:#3f7d2c;
+    --ok-bg:#eaf3e2;
+    --warn:#c97a12;
+    --warn-bg:#fbeed9;
+    --danger:#c73a34;
+    --danger-bg:#fbe6e5;
+    --line:#e6ddd2;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    font-family:'Inter',-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    background:var(--cream);
+    margin:0;
+    padding:0 0 40px;
+    color:var(--charcoal);
+  }
+  .wrap{ max-width:640px; margin:0 auto; padding:0 18px; }
+
+  .header{
+    background:
+      radial-gradient(120% 160% at 15% -20%, rgba(255,255,255,0.18), transparent 55%),
+      linear-gradient(135deg, var(--ember) 0%, var(--ember-deep) 100%);
+    color:#fff;
+    padding:28px 20px 30px;
+    margin-bottom:20px;
+    border-radius:0 0 28px 28px;
+    box-shadow:0 6px 20px rgba(178,61,26,0.28);
+  }
+  .header-inner{ max-width:640px; margin:0 auto; display:flex; align-items:center; gap:14px; }
+  .logo-circle{
+    width:52px; height:52px; border-radius:14px;
+    background:rgba(255,255,255,0.18);
+    display:flex; align-items:center; justify-content:center;
+    font-size:24px; flex-shrink:0;
+    border:1px solid rgba(255,255,255,0.4);
+  }
+  .brand-name{ font-family:'Fraunces',serif; font-size:21px; font-weight:700; letter-spacing:0.2px; margin:0; }
+  .brand-tag{ font-size:12.5px; opacity:0.92; margin:3px 0 0; }
+
+  h1{ font-family:'Fraunces',serif; font-size:19px; font-weight:600; margin:20px 0 4px; }
+  p.sub{ color:var(--soot); font-size:13px; margin:0 0 18px; line-height:1.5; }
+
+  .stats-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:9px; margin-bottom:18px; }
+  .stat-box{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:12px 8px; text-align:center; }
+  .stat-box .num{ font-family:'JetBrains Mono',monospace; font-size:18px; font-weight:600; }
+  .stat-box .lbl{ font-size:10.5px; color:#8a8074; margin-top:3px; line-height:1.3; }
+  .stat-box.overdue .num{ color:var(--danger); }
+  .stat-box.soon .num{ color:var(--warn); }
+  .stat-box.ok .num{ color:var(--ok); }
+  .stat-box.revenue .num{ color:var(--brass); font-size:15px; }
+
+  .card{ background:#fff; border-radius:14px; border:1px solid var(--line); padding:18px; margin-bottom:16px; box-shadow:0 1px 3px rgba(0,0,0,0.04); }
+  .card h2{ font-family:'Fraunces',serif; font-size:16px; font-weight:600; margin:0 0 12px; display:flex; align-items:center; gap:6px; }
+  label{ display:block; font-size:12.5px; color:var(--soot); margin-bottom:4px; margin-top:10px; font-weight:500; }
+  input, select{
+    width:100%; padding:10px 11px; border:1px solid #d8cfc2; border-radius:9px;
+    font-size:14px; font-family:'Inter',sans-serif; background:#fffdfa;
+  }
+  input:focus, select:focus{ outline:2px solid var(--ember); outline-offset:1px; border-color:var(--ember); }
+
+  button{
+    margin-top:14px; background:var(--ember-deep); color:#fff; border:none;
+    padding:11px 16px; border-radius:9px; font-size:14px; font-weight:600;
+    cursor:pointer; width:100%; transition:background 0.15s;
+  }
+  button:hover{ background:#96331a; }
+  button:focus-visible{ outline:2px solid var(--charcoal); outline-offset:2px; }
+  button.secondary{ background:#fff; color:var(--soot); border:1px solid #d8cfc2; }
+  button.secondary:hover{ background:#f3ede4; }
+  button.ghost{ background:transparent; color:var(--ember-deep); border:1px solid var(--ember); padding:9px 14px; }
+  button.ghost:hover{ background:#fdf0ea; }
+
+  .footer-brand{ text-align:center; font-size:12px; color:#a89a89; margin-top:22px; }
+
+  .customer{
+    border:1px solid var(--line); border-radius:12px; padding:13px;
+    margin-bottom:10px; display:flex; justify-content:space-between; align-items:flex-start; gap:10px;
+  }
+  .customer.overdue{ border-color:#eab3b0; background:var(--danger-bg); }
+  .customer.soon{ border-color:#f0cf99; background:var(--warn-bg); }
+  .customer.ok{ background:#fff; }
+
+  .flame{ flex-shrink:0; margin-top:2px; }
+
+  .cinfo{ font-size:13px; flex:1; min-width:0; }
+  .cinfo .name{ font-family:'Fraunces',serif; font-weight:600; font-size:15px; }
+  .cinfo .meta{ color:var(--soot); margin-top:2px; }
+  .cinfo .amount{ font-family:'JetBrains Mono',monospace; color:var(--brass); font-weight:600; margin-top:3px; }
+  .tag{ font-size:10.5px; font-weight:700; padding:3px 9px; border-radius:20px; white-space:nowrap; display:inline-block; margin-top:6px; letter-spacing:0.2px; }
+  .tag.overdue{ background:var(--danger); color:#fff; }
+  .tag.soon{ background:var(--warn); color:#fff; }
+  .tag.ok{ background:var(--ok); color:#fff; }
+
+  .cactions{ display:flex; flex-direction:column; gap:6px; flex-shrink:0; }
+  .cactions button{ margin:0; width:auto; padding:7px 11px; font-size:12px; white-space:nowrap; }
+
+  .empty{ text-align:center; color:#9a8d7c; padding:26px 10px; font-size:13px; }
+
+  .top-alert{
+    background:var(--danger); color:#fff; padding:11px 14px; border-radius:10px;
+    font-size:13px; margin-bottom:16px; display:none; font-weight:600;
+  }
+
+  .note{ font-size:12px; color:#a89a89; margin-top:8px; line-height:1.5; }
+
+  /* Install / add-to-home-screen card */
+  .install-card{ background:var(--charcoal); color:#f2ece3; }
+  .install-card h2{ color:#fff; }
+  .install-steps{ font-size:13px; line-height:1.6; color:#d9cfc2; margin:0; padding-left:18px; }
+  .install-steps li{ margin-bottom:4px; }
+  .platform-toggle{ display:flex; gap:8px; margin-bottom:12px; }
+  .platform-toggle button{ margin:0; width:auto; flex:1; padding:8px; font-size:12.5px; background:rgba(255,255,255,0.08); color:#f2ece3; border:1px solid rgba(255,255,255,0.2); }
+  .platform-toggle button.active{ background:var(--ember); border-color:var(--ember); }
+
+  /* Popup modal */
+  .modal-backdrop{
+    display:none; position:fixed; inset:0; background:rgba(36,31,26,0.55);
+    align-items:flex-end; justify-content:center; z-index:100; padding:0;
+  }
+  .modal-backdrop.show{ display:flex; }
+  .modal{
+    background:#fff; border-radius:18px 18px 0 0; width:100%; max-width:640px;
+    padding:22px 20px 26px; box-shadow:0 -8px 30px rgba(0,0,0,0.2);
+    max-height:80vh; overflow-y:auto;
+  }
+  @media (min-width:680px){
+    .modal-backdrop{ align-items:center; }
+    .modal{ border-radius:18px; max-width:420px; }
+  }
+  .modal h3{ font-family:'Fraunces',serif; font-size:18px; margin:0 0 4px; display:flex; align-items:center; gap:8px; }
+  .modal p{ font-size:13px; color:var(--soot); margin:4px 0 14px; }
+  .modal-list{ list-style:none; padding:0; margin:0 0 16px; }
+  .modal-list li{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:9px 0; border-bottom:1px solid var(--line); font-size:13.5px;
+  }
+  .modal-list li:last-child{ border-bottom:none; }
+  .modal-list .mtag{ font-size:10.5px; font-weight:700; padding:2px 8px; border-radius:20px; }
+  .modal-list .mtag.overdue{ background:var(--danger-bg); color:var(--danger); }
+  .modal-list .mtag.soon{ background:var(--warn-bg); color:var(--warn); }
+
+  /* Service entry modal */
+  .service-modal input{ margin-bottom:2px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo-circle">
+      <svg width="30" height="30" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="flameGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#ffd27a"/>
+            <stop offset="0.5" stop-color="#ffb238"/>
+            <stop offset="1" stop-color="#fff6e0"/>
+          </linearGradient>
+        </defs>
+        <path d="M50 16C50 16 30 34 30 54C30 71 39 82 50 82C61 82 70 71 70 54C70 47 65 42 65 42C65 50 60 53 60 53C63 42 50 34 50 22C50 22 55 30 50 36C45 42 40 47 40 55C40 62 44 67 50 67C56 67 60 62 60 56C60 56 54 61 50 56C47 52 50 47 50 47C50 47 50 16 50 16Z" fill="url(#flameGrad)"/>
+      </svg>
+    </div>
+    <div>
+      <p class="brand-name">M.K Enterprises</p>
+      <p class="brand-tag">Chimney Service</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <p class="sub">Add a customer once — this keeps track of when each chimney is next due for service, flags overdue jobs first, and logs what you've collected.</p>
+
+  <div id="statsRow" class="stats-row" style="display:none;">
+    <div class="stat-box ok"><div class="num" id="statTotal">0</div><div class="lbl">Customers</div></div>
+    <div class="stat-box soon"><div class="num" id="statSoon">0</div><div class="lbl">Due soon</div></div>
+    <div class="stat-box overdue"><div class="num" id="statOverdue">0</div><div class="lbl">Overdue</div></div>
+    <div class="stat-box revenue"><div class="num" id="statRevenue">₹0</div><div class="lbl">Collected</div></div>
+  </div>
+
+  <div id="topAlert" class="top-alert"></div>
+
+  <div class="card">
+    <h2>➕ Add customer</h2>
+    <label>Customer name</label>
+    <input id="name" placeholder="e.g. Ramesh Kumar">
+    <label>Phone number</label>
+    <input id="phone" placeholder="e.g. 98765 43210" inputmode="tel">
+    <label>Address / area</label>
+    <input id="address" placeholder="e.g. Anna Nagar">
+    <label>Last service date</label>
+    <input id="lastDate" type="date">
+    <label>Repeat every</label>
+    <select id="interval">
+      <option value="1">1 month</option>
+      <option value="3" selected>3 months</option>
+      <option value="6">6 months</option>
+      <option value="12">12 months</option>
+    </select>
+    <label>Amount charged (₹, optional)</label>
+    <input id="amount" type="number" min="0" placeholder="e.g. 800" inputmode="decimal">
+    <button onclick="addCustomer()">Add customer</button>
+  </div>
+
+  <div class="card">
+    <h2>📋 Customers — most urgent first</h2>
+    <div id="list"></div>
+  </div>
+
+  <div class="card install-card" id="installCard">
+    <h2>📲 Keep M.K Enterprises on your home screen</h2>
+    <div class="platform-toggle">
+      <button id="btnIOS" class="active" onclick="showPlatform('ios')">iPhone</button>
+      <button id="btnAndroid" onclick="showPlatform('android')">Android</button>
+    </div>
+    <ol class="install-steps" id="iosSteps">
+      <li>Open this page in <strong>Safari</strong>.</li>
+      <li>Tap the <strong>Share</strong> icon (square with an arrow) at the bottom.</li>
+      <li>Scroll down and tap <strong>Add to Home Screen</strong>.</li>
+      <li>Tap <strong>Add</strong> — M.K Enterprises now sits on your home screen with its own icon.</li>
+    </ol>
+    <ol class="install-steps" id="androidSteps" style="display:none;">
+      <li>Open this page in <strong>Chrome</strong>.</li>
+      <li>Tap the <strong>⋮</strong> menu in the top right.</li>
+      <li>Tap <strong>Add to Home screen</strong> (or use the button below if it appears).</li>
+      <li>Tap <strong>Add</strong> — M.K Enterprises now sits on your home screen with its own icon.</li>
+    </ol>
+    <button class="ghost" id="installBtn" style="display:none;" onclick="triggerInstall()">Add to home screen</button>
+  </div>
+
+  <p class="note">This tracker checks for due services whenever you open it. For it to remind you automatically without opening the page — for example daily SMS or WhatsApp alerts — that needs a small server-side setup (like a Google Sheet + WhatsApp automation). Ask and I can set that up separately.</p>
+  <p class="footer-brand">M.K Enterprises · Gas chimney sales &amp; service</p>
+</div>
+
+<!-- Due-reminder popup -->
+<div class="modal-backdrop" id="dueModalBackdrop">
+  <div class="modal">
+    <h3 id="dueModalTitle">⚠️ Service reminders</h3>
+    <p id="dueModalSub">These customers need attention.</p>
+    <ul class="modal-list" id="dueModalList"></ul>
+    <button onclick="closeDueModal()">Got it</button>
+  </div>
+</div>
+
+<!-- Mark serviced popup -->
+<div class="modal-backdrop" id="serviceModalBackdrop">
+  <div class="modal service-modal">
+    <h3>🔧 Log this service</h3>
+    <p id="serviceModalName"></p>
+    <label>Service date</label>
+    <input id="svcDate" type="date">
+    <label>Amount collected (₹)</label>
+    <input id="svcAmount" type="number" min="0" inputmode="decimal" placeholder="e.g. 800">
+    <button onclick="confirmService()">Save &amp; mark serviced</button>
+    <button class="secondary" onclick="closeServiceModal()">Cancel</button>
+  </div>
+</div>
+
+<script>
+let customers = [];
+let pendingServiceId = null;
+
+async function load() {
+  try {
+    const raw = localStorage.getItem('chimney-customers');
+    customers = raw ? JSON.parse(raw) : [];
+  } catch (e) {
+    customers = [];
+  }
+  render();
+  checkDueReminders();
+}
+
+async function save() {
+  try {
+    localStorage.setItem('chimney-customers', JSON.stringify(customers));
+  } catch (e) {
+    console.error('save failed', e);
+    alert('Could not save — your device storage may be full.');
+  }
+}
+
+function addCustomer() {
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const lastDate = document.getElementById('lastDate').value;
+  const interval = parseInt(document.getElementById('interval').value, 10);
+  const amount = parseFloat(document.getElementById('amount').value) || 0;
+
+  if (!name || !lastDate) {
+    alert('Please enter a name and last service date.');
+    return;
+  }
+
+  customers.push({
+    id: Date.now().toString(),
+    name, phone, address, lastDate, interval, amount,
+    history: amount ? [{ date: lastDate, amount }] : []
+  });
+
+  ['name','phone','address','lastDate','amount'].forEach(id => document.getElementById(id).value = '');
+
+  save();
+  render();
+}
+
+function openServiceModal(id) {
+  const c = customers.find(x => x.id === id);
+  if (!c) return;
+  pendingServiceId = id;
+  document.getElementById('serviceModalName').textContent = c.name;
+  document.getElementById('svcDate').value = new Date().toISOString().split('T')[0];
+  document.getElementById('svcAmount').value = c.amount || '';
+  document.getElementById('serviceModalBackdrop').classList.add('show');
+}
+
+function closeServiceModal() {
+  pendingServiceId = null;
+  document.getElementById('serviceModalBackdrop').classList.remove('show');
+}
+
+function confirmService() {
+  const c = customers.find(x => x.id === pendingServiceId);
+  if (!c) return closeServiceModal();
+  const date = document.getElementById('svcDate').value || new Date().toISOString().split('T')[0];
+  const amount = parseFloat(document.getElementById('svcAmount').value) || 0;
+
+  c.lastDate = date;
+  c.amount = amount;
+  c.history = c.history || [];
+  c.history.push({ date, amount });
+
+  save();
+  render();
+  closeServiceModal();
+}
+
+function removeCustomer(id) {
+  if (!confirm('Remove this customer?')) return;
+  customers = customers.filter(x => x.id !== id);
+  save();
+  render();
+}
+
+function nextDueDate(c) {
+  const d = new Date(c.lastDate);
+  d.setMonth(d.getMonth() + c.interval);
+  return d;
+}
+
+function daysUntil(date) {
+  const now = new Date();
+  now.setHours(0,0,0,0);
+  const d = new Date(date);
+  d.setHours(0,0,0,0);
+  return Math.round((d - now) / (1000*60*60*24));
+}
+
+function statusFor(days) {
+  if (days < 0) return 'overdue';
+  if (days <= 7) return 'soon';
+  return 'ok';
+}
+
+function flameIcon(status) {
+  const fills = { overdue: '#c73a34', soon: '#c97a12', ok: '#3f7d2c' };
+  const fill = fills[status];
+  return `<svg class="flame" width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13 1C13 1 5 9 5 17C5 22.5228 8.58172 26 13 26C17.4183 26 21 22.5228 21 17C21 14 19 12 19 12C19 15 17 16 17 16C18 12 13 9 13 5C13 5 15 8 13 10C11 12 9 14 9 17C9 20 10.5 22 13 22C15.5 22 17 20 17 17.5C17 17.5 14.5 19.5 13 17.5C11.8 15.9 13 13.5 13 13.5C13 13.5 13 1 13 1Z" fill="${fill}"/>
+  </svg>`;
+}
+
+function formatRupees(n) {
+  return '₹' + Math.round(n).toLocaleString('en-IN');
+}
+
+function render() {
+  const list = document.getElementById('list');
+  const alertBox = document.getElementById('topAlert');
+  const statsRow = document.getElementById('statsRow');
+
+  if (customers.length === 0) {
+    list.innerHTML = '<div class="empty">No customers yet. Add your first one above — the tracker will sort them by how soon each service is due.</div>';
+    alertBox.style.display = 'none';
+    statsRow.style.display = 'none';
+    return;
+  }
+
+  statsRow.style.display = 'grid';
+
+  const sorted = [...customers].sort((a,b) => nextDueDate(a) - nextDueDate(b));
+  let overdueCount = 0, soonCount = 0, totalRevenue = 0;
+
+  customers.forEach(c => {
+    (c.history || []).forEach(h => totalRevenue += (h.amount || 0));
+  });
+
+  list.innerHTML = sorted.map(c => {
+    const due = nextDueDate(c);
+    const days = daysUntil(due);
+    const status = statusFor(days);
+    const tagText = status === 'overdue' ? `Overdue by ${Math.abs(days)}d`
+                  : status === 'soon' ? (days === 0 ? 'Due today' : days === 1 ? 'Due tomorrow' : `Due in ${days}d`)
+                  : 'On track';
+
+    if (status === 'overdue') overdueCount++;
+    if (status === 'soon') soonCount++;
+
+    return `<div class="customer ${status}">
+      ${flameIcon(status)}
+      <div class="cinfo">
+        <div class="name">${escapeHtml(c.name)}</div>
+        <div class="meta">${escapeHtml(c.address || '')}${c.phone ? ' · ' + escapeHtml(c.phone) : ''}</div>
+        <div class="meta">Next due: ${due.toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'})}</div>
+        ${c.amount ? `<div class="amount">${formatRupees(c.amount)} last charged</div>` : ''}
+        <span class="tag ${status}">${tagText}</span>
+      </div>
+      <div class="cactions">
+        <button onclick="openServiceModal('${c.id}')">Serviced today</button>
+        <button class="secondary" onclick="removeCustomer('${c.id}')">Remove</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('statTotal').textContent = customers.length;
+  document.getElementById('statSoon').textContent = soonCount;
+  document.getElementById('statOverdue').textContent = overdueCount;
+  document.getElementById('statRevenue').textContent = formatRupees(totalRevenue);
+
+  if (overdueCount > 0) {
+    alertBox.style.display = 'block';
+    alertBox.textContent = `⚠️ ${overdueCount} customer${overdueCount > 1 ? 's' : ''} overdue for service — please follow up.`;
+  } else {
+    alertBox.style.display = 'none';
+  }
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+/* ---------- Due reminders: in-app popup + browser notification ---------- */
+
+function checkDueReminders() {
+  if (customers.length === 0) return;
+
+  const flagged = customers
+    .map(c => {
+      const due = nextDueDate(c);
+      const days = daysUntil(due);
+      return { c, days, status: statusFor(days) };
+    })
+    .filter(x => x.status !== 'ok')
+    .sort((a,b) => a.days - b.days);
+
+  if (flagged.length === 0) return;
+
+  const overdueN = flagged.filter(x => x.status === 'overdue').length;
+  const soonN = flagged.filter(x => x.status === 'soon').length;
+
+  // In-app popup, always shown — works with no permissions needed
+  const list = document.getElementById('dueModalList');
+  list.innerHTML = flagged.map(x => {
+    const label = x.status === 'overdue' ? `Overdue by ${Math.abs(x.days)}d` : (x.days === 0 ? 'Due today' : x.days === 1 ? 'Due tomorrow' : `Due in ${x.days}d`);
+    return `<li><span>${escapeHtml(x.c.name)}</span><span class="mtag ${x.status}">${label}</span></li>`;
+  }).join('');
+
+  document.getElementById('dueModalSub').textContent =
+    `${overdueN ? overdueN + ' overdue' : ''}${overdueN && soonN ? ', ' : ''}${soonN ? soonN + ' due within a week' : ''}.`;
+  document.getElementById('dueModalBackdrop').classList.add('show');
+
+  // Browser notification too, if the user has allowed it
+  maybeSendBrowserNotification(overdueN, soonN);
+}
+
+function closeDueModal() {
+  document.getElementById('dueModalBackdrop').classList.remove('show');
+}
+
+function maybeSendBrowserNotification(overdueN, soonN) {
+  if (!('Notification' in window)) return;
+
+  const body = `${overdueN ? overdueN + ' overdue' : ''}${overdueN && soonN ? ', ' : ''}${soonN ? soonN + ' due soon' : ''}. Open the tracker to review.`;
+
+  const fire = () => {
+    try {
+      new Notification('M.K Enterprises — Service due', { body, tag: 'chimney-due' });
+    } catch (e) { /* notifications unsupported in this context */ }
+  };
+
+  if (Notification.permission === 'granted') {
+    fire();
+  } else if (Notification.permission !== 'denied') {
+    Notification.requestPermission().then(p => { if (p === 'granted') fire(); });
+  }
+}
+
+/* ---------- Home screen install ---------- */
+
+function showPlatform(p) {
+  document.getElementById('iosSteps').style.display = p === 'ios' ? 'block' : 'none';
+  document.getElementById('androidSteps').style.display = p === 'android' ? 'block' : 'none';
+  document.getElementById('btnIOS').classList.toggle('active', p === 'ios');
+  document.getElementById('btnAndroid').classList.toggle('active', p === 'android');
+}
+
+let deferredInstallPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  document.getElementById('installBtn').style.display = 'block';
+});
+
+function triggerInstall() {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  deferredInstallPrompt = null;
+  document.getElementById('installBtn').style.display = 'none';
+}
+
+// Default the install steps to whichever platform looks right
+if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+  showPlatform('ios');
+} else {
+  showPlatform('android');
+}
+
+load();
+</script>
+</body>
+</html>
