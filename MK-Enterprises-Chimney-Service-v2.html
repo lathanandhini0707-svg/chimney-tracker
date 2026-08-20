@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>M.K Enterprises - Chimney Service</title>
+
+<!-- Home-screen support -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="M.K Enterprises">
+<meta name="theme-color" content="#075985">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f2a13a'/%3E%3Cstop offset='0.55' stop-color='%23e2662f'/%3E%3Cstop offset='1' stop-color='%23961f0f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23241f1a'/%3E%3Cpath d='M50 16C50 16 30 34 30 54C30 71 39 82 50 82C61 82 70 71 70 54C70 47 65 42 65 42C65 50 60 53 60 53C63 42 50 34 50 22C50 22 55 30 50 36C45 42 40 47 40 55C40 62 44 67 50 67C56 67 60 62 60 56C60 56 54 61 50 56C47 52 50 47 50 47C50 47 50 16 50 16Z' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23f2a13a'/%3E%3Cstop offset='0.55' stop-color='%23e2662f'/%3E%3Cstop offset='1' stop-color='%23961f0f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23241f1a'/%3E%3Cpath d='M50 16C50 16 30 34 30 54C30 71 39 82 50 82C61 82 70 71 70 54C70 47 65 42 65 42C65 50 60 53 60 53C63 42 50 34 50 22C50 22 55 30 50 36C45 42 40 47 40 55C40 62 44 67 50 67C56 67 60 62 60 56C60 56 54 61 50 56C47 52 50 47 50 47C50 47 50 16 50 16Z' fill='url(%23g)'/%3E%3C/svg%3E">
+<link rel="manifest" href='data:application/manifest+json,{"name":"M.K Enterprises Chimney Service","short_name":"M.K Enterprises","start_url":".","display":"standalone","background_color":"%23f4f8fb","theme_color":"%2307585}'>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+
+<style>
+:root{
+  --bg:#f4f8fb; --surface:#ffffff; --ink:#102a43; --muted:#52606d;
+  --primary:#075985; --primary2:#0b7285; --accent:#f59e0b;
+  --ok:#15803d; --ok-bg:#ecfdf3; --warn:#d97706; --warn-bg:#fff7ed;
+  --danger:#dc2626; --danger-bg:#fef2f2; --line:#d9e2ec;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; padding:0 0 36px; color:var(--ink);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  background:var(--bg); font-size:17px;
+}
+.wrap{max-width:720px;margin:0 auto;padding:0 16px}
+.header{
+  background:linear-gradient(135deg,#075985,#0b7285);
+  color:#fff;padding:24px 18px 26px;margin-bottom:18px;
+  border-radius:0 0 26px 26px;box-shadow:0 8px 24px rgba(7,89,133,.22)
+}
+.header-inner{max-width:720px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:14px;text-align:center}
+.logo-circle{width:58px;height:58px;border-radius:16px;background:rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(255,255,255,.4)}
+.brand-name{font-size:25px;font-weight:800;margin:0;letter-spacing:.2px}
+.brand-tag{display:none}
+h1{font-size:28px;line-height:1.2;text-align:center;margin:12px 0 8px;font-weight:800}
+p.sub{color:var(--muted);font-size:17px;text-align:center;margin:0 0 18px;line-height:1.5}
+.card{background:var(--surface);border-radius:18px;border:1px solid var(--line);padding:20px;margin-bottom:16px;box-shadow:0 3px 12px rgba(16,42,67,.06)}
+.card h2{font-size:22px;font-weight:800;margin:0 0 16px;display:flex;align-items:center;gap:8px}
+label{display:block;font-size:17px;color:var(--muted);margin:14px 0 6px;font-weight:700}
+input,select{
+  width:100%;padding:14px;border:1px solid #bcccdc;border-radius:12px;
+  font-size:17px;font-family:inherit;background:#fff;min-height:50px
+}
+button{
+  margin-top:14px;background:var(--primary);color:#fff;border:none;
+  padding:14px 16px;border-radius:12px;font-size:18px;font-weight:800;
+  cursor:pointer;width:100%;min-height:52px
+}
+button.secondary{background:#fff;color:var(--ink);border:1px solid #bcccdc}
+button.ghost{background:#fff;color:var(--primary);border:2px solid var(--primary)}
+button.danger{background:var(--danger)}
+.stats-row{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
+.stat-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 10px;text-align:center}
+.stat-box .num{font-size:25px;font-weight:900}
+.stat-box .lbl{font-size:15px;color:var(--muted);margin-top:4px;font-weight:700}
+.stat-box.overdue .num{color:var(--danger)} .stat-box.soon .num{color:var(--warn)}
+.stat-box.ok .num{color:var(--ok)} .stat-box.revenue .num{color:var(--primary)}
+.top-alert{background:var(--danger);color:#fff;padding:15px;border-radius:14px;font-size:18px;margin-bottom:16px;display:none;font-weight:800;text-align:center}
+.customer{
+  border:2px solid var(--line);border-radius:18px;padding:17px;margin-bottom:13px;
+  display:block;background:#fff;box-shadow:0 3px 10px rgba(16,42,67,.05)
+}
+.customer.overdue{border-color:#fca5a5;background:var(--danger-bg)}
+.customer.soon{border-color:#fdba74;background:var(--warn-bg)}
+.customer.ok{border-color:#bbf7d0;background:var(--ok-bg)}
+.cinfo{font-size:17px}
+.cinfo .name{font-size:22px;font-weight:900;margin-bottom:8px}
+.cinfo .meta{color:var(--muted);margin-top:6px;font-size:17px;line-height:1.45}
+.cinfo .amount{font-size:21px;color:var(--primary);font-weight:900;margin-top:8px}
+.tag{font-size:17px;font-weight:900;padding:7px 12px;border-radius:20px;display:inline-block;margin-top:10px}
+.tag.overdue{background:var(--danger);color:#fff}.tag.soon{background:var(--warn);color:#fff}.tag.ok{background:var(--ok);color:#fff}
+.cactions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.cactions button{margin:0;width:100%;font-size:16px;min-height:48px}
+.empty{text-align:center;color:var(--muted);padding:30px 10px;font-size:17px;line-height:1.5}
+.install-card{background:#102a43;color:#fff}.install-card h2{color:#fff}
+.install-steps{font-size:16px;line-height:1.65;color:#d9e2ec;margin:0;padding-left:22px}
+.platform-toggle{display:flex;gap:8px;margin-bottom:12px}
+.platform-toggle button{margin:0;font-size:16px;background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.25)}
+.platform-toggle button.active{background:var(--primary2);border-color:var(--primary2)}
+.note{font-size:15px;color:var(--muted);margin-top:10px;line-height:1.5}
+.footer-brand{display:none}
+.modal-backdrop{display:none;position:fixed;inset:0;background:rgba(16,42,67,.6);align-items:center;justify-content:center;z-index:100;padding:14px}
+.modal-backdrop.show{display:flex}
+.modal{background:#fff;border-radius:22px;width:100%;max-width:620px;padding:24px;box-shadow:0 14px 40px rgba(0,0,0,.25);max-height:88vh;overflow-y:auto}
+.modal h3{font-size:24px;margin:0 0 8px;font-weight:900}
+.modal p{font-size:17px;color:var(--muted);margin:5px 0 16px}
+.modal-list{list-style:none;padding:0;margin:0 0 16px}
+.modal-list li{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);font-size:18px;font-weight:800}
+.modal-list .mtag{font-size:15px;font-weight:900;padding:6px 10px;border-radius:20px;white-space:nowrap}
+.modal-list .mtag.overdue{background:var(--danger-bg);color:var(--danger)}
+.modal-list .mtag.soon{background:var(--warn-bg);color:var(--warn)}
+.reminder-hero{
+  text-align:center;border-radius:20px;padding:20px;margin-bottom:16px;
+  background:linear-gradient(135deg,#075985,#0b7285);color:#fff;
+  box-shadow:0 8px 20px rgba(7,89,133,.22)
+}
+.reminder-hero .icon{font-size:40px;line-height:1}
+.reminder-hero .title{font-size:25px;font-weight:900;margin-top:8px}
+.reminder-hero .count{font-size:19px;margin-top:5px}
+.data-tools{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.data-tools button{font-size:16px}
+@media(max-width:430px){
+  body{font-size:16px}.brand-name{font-size:22px}h1{font-size:25px}.cinfo .name{font-size:21px}
+  .cactions{grid-template-columns:1fr}.stats-row{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo-circle">
+      <svg width="34" height="34" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <rect x="28" y="30" width="44" height="54" rx="4" fill="#ffffff"/>
+        <rect x="23" y="25" width="54" height="10" rx="3" fill="#d7f3f5"/>
+        <path d="M37 25V15h26v10" fill="none" stroke="#ffffff" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M44 14c-3-7 6-9 4-14 9 7 8 13 3 18" fill="none" stroke="#7dd3fc" stroke-width="5" stroke-linecap="round"/>
+        <rect x="36" y="42" width="9" height="9" rx="2" fill="#075985"/>
+        <rect x="55" y="42" width="9" height="9" rx="2" fill="#075985"/>
+        <rect x="46" y="59" width="9" height="25" rx="2" fill="#075985"/>
+      </svg>
+    </div>
+    <div>
+      <p class="brand-name">M.K Enterprises</p>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <h1>🔥 CHIMNEY SERVICE</h1><p class="sub">Customer service &amp; reminder management</p>
+
+  <div id="statsRow" class="stats-row" style="display:none;">
+    <div class="stat-box ok"><div class="num" id="statTotal">0</div><div class="lbl">Customers</div></div>
+    <div class="stat-box soon"><div class="num" id="statSoon">0</div><div class="lbl">Due soon</div></div>
+    <div class="stat-box overdue"><div class="num" id="statOverdue">0</div><div class="lbl">Overdue</div></div>
+    <div class="stat-box revenue"><div class="num" id="statRevenue">₹0</div><div class="lbl">Collected</div></div>
+  </div>
+
+  <div id="topAlert" class="top-alert"></div>
+
+  <div class="card">
+    <h2>➕ Add customer</h2>
+    <label>Customer name</label>
+    <input id="name" placeholder="e.g. Ramesh Kumar">
+    <label>Phone number</label>
+    <input id="phone" placeholder="e.g. 98765 43210" inputmode="tel">
+    <label>Address / area</label>
+    <input id="address" placeholder="e.g. Anna Nagar">
+    <label>Last service date</label>
+    <input id="lastDate" type="date">
+    <label>Repeat every</label>
+    <select id="interval">
+      <option value="1">1 month</option>
+      <option value="3" selected>3 months</option>
+      <option value="6">6 months</option>
+      <option value="12">12 months</option>
+    </select>
+    <label>Amount charged (₹, optional)</label>
+    <input id="amount" type="number" min="0" placeholder="e.g. 800" inputmode="decimal">
+    <button onclick="addCustomer()">Add customer</button>
+  </div>
+
+  <div class="card">
+    <h2>👥 CUSTOMER REMINDERS</h2>
+    <div id="list"></div>
+  </div>
+  <div class="card">
+    <h2>📦 Data Backup</h2>
+    <p class="note">Your data stays on this phone/browser until cloud sync is added. Use Backup before changing devices.</p>
+    <div class="data-tools">
+      <button class="ghost" onclick="exportData()">⬇️ Backup</button>
+      <button class="secondary" onclick="document.getElementById('importFile').click()">⬆️ Restore</button>
+    </div>
+    <input id="importFile" type="file" accept="application/json" style="display:none" onchange="importData(event)">
+  </div>
+  <div class="card">
+    <h2>📤 Share App</h2>
+    <p class="note">Share the app link. Customer data is not placed inside the link.</p>
+    <button class="ghost" onclick="shareApp()">Share Chimney App</button>
+  </div>
+
+</div>
+
+<!-- Due-reminder popup -->
+<div class="modal-backdrop" id="dueModalBackdrop">
+  <div class="modal">
+    <div class="reminder-hero"><div class="icon">🔔</div><div class="title">SERVICE REMINDER</div><div class="count" id="dueCountText">Customers needing attention</div></div>
+    <p id="dueModalSub">These customers need attention.</p>
+    <ul class="modal-list" id="dueModalList"></ul>
+    <button onclick="closeDueModal()">Got it</button>
+  </div>
+</div>
+
+<!-- Mark serviced popup -->
+<div class="modal-backdrop" id="serviceModalBackdrop">
+  <div class="modal service-modal">
+    <h3>🔧 Log this service</h3>
+    <p id="serviceModalName"></p>
+    <label>Service date</label>
+    <input id="svcDate" type="date">
+    <label>Amount collected (₹)</label>
+    <input id="svcAmount" type="number" min="0" inputmode="decimal" placeholder="e.g. 800">
+    <button onclick="confirmService()">Save &amp; mark serviced</button>
+    <button class="secondary" onclick="closeServiceModal()">Cancel</button>
+  </div>
+</div>
+
+<script>
+let customers = [];
+let pendingServiceId = null;
+
+function load() {
+  try {
+    const raw = localStorage.getItem('mk-chimney-customers');
+    customers = raw ? JSON.parse(raw) : [];
+  } catch (e) {
+    customers = [];
+  }
+  render();
+  checkDueReminders();
+}
+
+function save() {
+  try {
+    localStorage.setItem('mk-chimney-customers', JSON.stringify(customers));
+  } catch (e) {
+    console.error('save failed', e);
+    alert('Could not save data on this browser.');
+  }
+}
+
+function exportData() {
+  const blob = new Blob([JSON.stringify(customers, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'MK-Enterprises-Chimney-Backup.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function importData(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = () => {
+    try {
+      const imported = JSON.parse(reader.result);
+      if (!Array.isArray(imported)) throw new Error('Invalid backup');
+      customers = imported;
+      save();
+      render();
+      alert('Backup restored successfully.');
+    } catch (e) {
+      alert('Invalid backup file.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+async function shareApp() {
+  const data = {title:'M.K Enterprises Chimney Service', text:'Open the Chimney Service App', url:location.href};
+  try {
+    if (navigator.share) await navigator.share(data);
+    else await navigator.clipboard.writeText(location.href), alert('App link copied. You can share it on WhatsApp.');
+  } catch(e) {}
+}
+
+function addCustomer() {
+  const name = document.getElementById('name').value.trim();
+  const phone = document.getElementById('phone').value.trim();
+  const address = document.getElementById('address').value.trim();
+  const lastDate = document.getElementById('lastDate').value;
+  const interval = parseInt(document.getElementById('interval').value, 10);
+  const amount = parseFloat(document.getElementById('amount').value) || 0;
+
+  if (!name || !lastDate) {
+    alert('Please enter a name and last service date.');
+    return;
+  }
+
+  customers.push({
+    id: Date.now().toString(),
+    name, phone, address, lastDate, interval, amount,
+    history: amount ? [{ date: lastDate, amount }] : []
+  });
+
+  ['name','phone','address','lastDate','amount'].forEach(id => document.getElementById(id).value = '');
+
+  save();
+  render();
+}
+
+function openServiceModal(id) {
+  const c = customers.find(x => x.id === id);
+  if (!c) return;
+  pendingServiceId = id;
+  document.getElementById('serviceModalName').textContent = c.name;
+  document.getElementById('svcDate').value = new Date().toISOString().split('T')[0];
+  document.getElementById('svcAmount').value = c.amount || '';
+  document.getElementById('serviceModalBackdrop').classList.add('show');
+}
+
+function closeServiceModal() {
+  pendingServiceId = null;
+  document.getElementById('serviceModalBackdrop').classList.remove('show');
+}
+
+function confirmService() {
+  const c = customers.find(x => x.id === pendingServiceId);
+  if (!c) return closeServiceModal();
+  const date = document.getElementById('svcDate').value || new Date().toISOString().split('T')[0];
+  const amount = parseFloat(document.getElementById('svcAmount').value) || 0;
+
+  c.lastDate = date;
+  c.amount = amount;
+  c.history = c.history || [];
+  c.history.push({ date, amount });
+
+  save();
+  render();
+  closeServiceModal();
+}
+
+function removeCustomer(id) {
+  if (!confirm('Delete this customer and all service history? This cannot be undone.')) return;
+  customers = customers.filter(x => x.id !== id);
+  save();
+  render();
+}
+
+function nextDueDate(c) {
+  const d = new Date(c.lastDate);
+  d.setMonth(d.getMonth() + c.interval);
+  return d;
+}
+
+function daysUntil(date) {
+  const now = new Date();
+  now.setHours(0,0,0,0);
+  const d = new Date(date);
+  d.setHours(0,0,0,0);
+  return Math.round((d - now) / (1000*60*60*24));
+}
+
+function statusFor(days) {
+  if (days < 0) return 'overdue';
+  if (days <= 7) return 'soon';
+  return 'ok';
+}
+
+function flameIcon(status) {
+  const fills = { overdue: '#c73a34', soon: '#c97a12', ok: '#3f7d2c' };
+  const fill = fills[status];
+  return `<svg class="flame" width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M13 1C13 1 5 9 5 17C5 22.5228 8.58172 26 13 26C17.4183 26 21 22.5228 21 17C21 14 19 12 19 12C19 15 17 16 17 16C18 12 13 9 13 5C13 5 15 8 13 10C11 12 9 14 9 17C9 20 10.5 22 13 22C15.5 22 17 20 17 17.5C17 17.5 14.5 19.5 13 17.5C11.8 15.9 13 13.5 13 13.5C13 13.5 13 1 13 1Z" fill="${fill}"/>
+  </svg>`;
+}
+
+function formatRupees(n) {
+  return '₹' + Math.round(n).toLocaleString('en-IN');
+}
+
+function render() {
+  const list = document.getElementById('list');
+  const alertBox = document.getElementById('topAlert');
+  const statsRow = document.getElementById('statsRow');
+
+  if (customers.length === 0) {
+    list.innerHTML = '<div class="empty">No customers yet. Add your first one above — the tracker will sort them by how soon each service is due.</div>';
+    alertBox.style.display = 'none';
+    statsRow.style.display = 'none';
+    return;
+  }
+
+  statsRow.style.display = 'grid';
+
+  const sorted = [...customers].sort((a,b) => nextDueDate(a) - nextDueDate(b));
+  let overdueCount = 0, soonCount = 0, totalRevenue = 0;
+
+  customers.forEach(c => {
+    (c.history || []).forEach(h => totalRevenue += (h.amount || 0));
+  });
+
+  list.innerHTML = sorted.map(c => {
+    const due = nextDueDate(c);
+    const days = daysUntil(due);
+    const status = statusFor(days);
+    const tagText = status === 'overdue' ? `Overdue by ${Math.abs(days)}d`
+                  : status === 'soon' ? (days === 0 ? 'Due today' : days === 1 ? 'Due tomorrow' : `Due in ${days}d`)
+                  : 'On track';
+
+    if (status === 'overdue') overdueCount++;
+    if (status === 'soon') soonCount++;
+
+    return `<div class="customer ${status}">
+      <div class="cinfo">
+        <div class="name">🔥 ${escapeHtml(c.name)}</div>
+        ${c.phone ? `<div class="meta">📞 ${escapeHtml(c.phone)}</div>` : ''}
+        ${c.address ? `<div class="meta">📍 ${escapeHtml(c.address)}</div>` : ''}
+        <div class="meta">🛠️ Last service: ${new Date(c.lastDate).toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'})}</div>
+        <div class="meta">📅 Next service: ${due.toLocaleDateString('en-IN', {day:'numeric', month:'short', year:'numeric'})}</div>
+        ${c.amount ? `<div class="amount">💰 ${formatRupees(c.amount)}</div>` : ''}
+        <span class="tag ${status}">${tagText}</span>
+      </div>
+      <div class="cactions">
+        <button onclick="openServiceModal('${c.id}')">✅ MARK SERVICED</button>
+        <button class="secondary" onclick="removeCustomer('${c.id}')">🗑️ Delete</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('statTotal').textContent = customers.length;
+  document.getElementById('statSoon').textContent = soonCount;
+  document.getElementById('statOverdue').textContent = overdueCount;
+  document.getElementById('statRevenue').textContent = formatRupees(totalRevenue);
+
+  if (overdueCount > 0) {
+    alertBox.style.display = 'block';
+    alertBox.textContent = `⚠️ ${overdueCount} customer${overdueCount > 1 ? 's' : ''} overdue for service — please follow up.`;
+  } else {
+    alertBox.style.display = 'none';
+  }
+}
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+/* ---------- Due reminders: in-app popup + browser notification ---------- */
+
+function checkDueReminders() {
+  if (customers.length === 0) return;
+
+  const flagged = customers
+    .map(c => {
+      const due = nextDueDate(c);
+      const days = daysUntil(due);
+      return { c, days, status: statusFor(days) };
+    })
+    .filter(x => x.status !== 'ok')
+    .sort((a,b) => a.days - b.days);
+
+  if (flagged.length === 0) return;
+
+  const overdueN = flagged.filter(x => x.status === 'overdue').length;
+  const soonN = flagged.filter(x => x.status === 'soon').length;
+
+  // In-app popup, always shown — works with no permissions needed
+  const list = document.getElementById('dueModalList');
+  list.innerHTML = flagged.map(x => {
+    const label = x.status === 'overdue' ? `Overdue by ${Math.abs(x.days)}d` : (x.days === 0 ? 'Due today' : x.days === 1 ? 'Due tomorrow' : `Due in ${x.days}d`);
+    return `<li><span>${escapeHtml(x.c.name)}</span><span class="mtag ${x.status}">${label}</span></li>`;
+  }).join('');
+
+  document.getElementById('dueCountText').textContent = `${flagged.length} customer${flagged.length === 1 ? '' : 's'} need attention`;
+  document.getElementById('dueModalSub').textContent =
+    `${overdueN ? overdueN + ' overdue' : ''}${overdueN && soonN ? ', ' : ''}${soonN ? soonN + ' due within a week' : ''}.`;
+  document.getElementById('dueModalBackdrop').classList.add('show');
+
+  // Browser notification too, if the user has allowed it
+  maybeSendBrowserNotification(overdueN, soonN);
+}
+
+function closeDueModal() {
+  document.getElementById('dueModalBackdrop').classList.remove('show');
+}
+
+function maybeSendBrowserNotification(overdueN, soonN) {
+  if (!('Notification' in window)) return;
+
+  const body = `${overdueN ? overdueN + ' overdue' : ''}${overdueN && soonN ? ', ' : ''}${soonN ? soonN + ' due soon' : ''}. Open the tracker to review.`;
+
+  const fire = () => {
+    try {
+      new Notification('M.K Enterprises — Chimney service due', { body, tag: 'chimney-due' });
+    } catch (e) { /* notifications unsupported in this context */ }
+  };
+
+  if (Notification.permission === 'granted') {
+    fire();
+  } else if (Notification.permission !== 'denied') {
+    Notification.requestPermission().then(p => { if (p === 'granted') fire(); });
+  }
+}
+
+load();
+</script>
+</body>
+</html>
